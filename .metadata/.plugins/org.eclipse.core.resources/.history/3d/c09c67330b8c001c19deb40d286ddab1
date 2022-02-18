@@ -1,0 +1,8 @@
+package com.leanproject.igsocial.util;
+
+
+
+
+public class WebSecurityConfig {
+
+}

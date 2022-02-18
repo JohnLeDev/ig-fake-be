@@ -1,0 +1,9 @@
+package com.leanproject.igsocial.util;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig  {
+
+}

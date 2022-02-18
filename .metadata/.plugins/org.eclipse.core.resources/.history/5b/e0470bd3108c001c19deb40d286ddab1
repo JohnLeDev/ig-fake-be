@@ -1,0 +1,23 @@
+package com.leanproject.igsocial.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.leanproject.igsocial.dto.LoginDto;
+import com.leanproject.igsocial.model.Person;
+import com.leanproject.igsocial.reponsitory.LoginReponsitory;
+
+@Service
+public class LoginService implements UserDetailsService{
+	
+	@Autowired
+	private LoginReponsitory loginReponsitory;
+	public boolean login(LoginDto loginDto) {
+		Person person = loginReponsitory.login(loginDto.getUsername());
+		System.out.println(person.getDescription());
+		if(person != null) {
+			return true;
+		} ;
+		return false;
+	}
+}
